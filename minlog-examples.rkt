@@ -4,6 +4,7 @@
 ;; pt = parse term
 ;; pf = parse formula
 ;; pp = pretty print
+
 ;; (add-pvar-name <name> <arity>)
 ;; create a new predicate variable (symbol) with <name> and <arity>
 
@@ -30,11 +31,18 @@
 ;; →⁻  with assumption <avar> and ∀⁻ with <term>s, autoapplying ∧⁻ as needed
 
 ;; (split) = ∧⁺
-;; (intro <n>) = ∨⁺ₙ
-;; (elim) = ∨⁻
-;; (ord-intro [01])
+;; (intro <n>) = ∨⁺ ₙ
+;; (elim <avar>) = ∨⁻ <avar>
 ;; (ex-intro <term>) = ∃⁺ <term>
 ;; (ex-elim <avar>) = ∃⁻ <avar>
+
+;; (current-proof) = current proof object
+
+;; (cdp [<proof>])
+;; check and display (current) <proof> as a tree
+
+;; (proof-to-expr <proof>)
+;; display proof as a lambda term
 
 ;; (add-var-name <name> <type>)
 ;; create a new variable with <name> of <type>
