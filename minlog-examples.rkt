@@ -50,6 +50,7 @@
 (add-pvar-name "A" (make-arity))
 (set-goal (pf "A -> A"))
 (assume "u")
+(use "u")
 (cdp)
 (proof-to-expr (current-proof))
 
@@ -66,6 +67,7 @@
 (use "u")
 (use "w")
 (use "v")
+(use "w")
 (cdp)
 (proof-to-expr (current-proof))
 
